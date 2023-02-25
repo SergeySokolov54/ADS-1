@@ -6,9 +6,13 @@
 bool checkPrime(uint64_t value) {
     if (value == 0) { return false; }
     int k = 0;
-    for (int i = 2;i < value; i++) {
-        if (value % i != 0) { continue; }
-        else { k = 1; }
+    for (int i = 2; i < value; i++) {
+        if (value % i != 0) { 
+            continue; 
+        }
+        else { 
+            k = 1; 
+        }
     }
     if (k == 1) { return false; }
     else{ return true; }
