@@ -13,8 +13,11 @@ bool checkPrime(uint64_t value) {
             k = 1;
         }
     }
-    if (k == 1) { return false; }
-    else { return true; }
+    if (k == 1) { 
+        return false; 
+    } else {
+        return true; 
+    }
 }
 
 uint64_t nPrime(uint64_t n) {
