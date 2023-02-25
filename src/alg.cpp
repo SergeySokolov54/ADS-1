@@ -13,10 +13,10 @@ bool checkPrime(uint64_t value) {
             k = 1;
         }
     }
-    if (k == 1) { 
-        return false; 
+    if (k == 1) {
+        return false;
     } else {
-        return true; 
+        return true;
     }
 }
 
