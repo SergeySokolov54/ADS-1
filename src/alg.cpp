@@ -4,9 +4,11 @@
 
 
 bool checkPrime(uint64_t value) {
-    if (value == 0) { return false; }
+    if (value == 0) {
+        return false;
+    }
     int k = 0;
-    for (int i = 2; i < value; i++) {
+    for (int i = 2;i < value; i++) {
         if (value % i != 0) {
             continue;
         } else {
@@ -21,17 +23,17 @@ bool checkPrime(uint64_t value) {
 }
 
 uint64_t nPrime(uint64_t n) {
-    int k = 0;
-    int chislo = 0;
-    while (true) {
-        k++;
-        if (checkPrime(k)) {
-            chislo += 1;
+        uint64_t k = 0;
+        uint64_t chislo = 0;
+        while (true) {
+            k++;
+            if (checkPrime(k)) {
+                chislo += 1;
+            }
+            if (n == chislo) {
+                return k;
+            }
         }
-        if (n == chislo) {
-            return k;
-        }
-    }
 }
 
 uint64_t nextPrime(uint64_t value) {
@@ -46,8 +48,8 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-    int k = 0;
-    for (int i = 2; i < hbound; i++) {
+    uint64_t k = 0;
+    for (int i = 2;i < hbound; i++) {
         if (checkPrime(i)) {
             k += i;
         } else {
