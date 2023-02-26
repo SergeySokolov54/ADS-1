@@ -7,8 +7,8 @@ bool checkPrime(uint64_t value) {
     if (value == 0) {
         return false;
     }
-    int k = 0;
-    for (int i = 2; i < value; i++) {
+    uint64_t k = 0;
+    for (uint64_t i = 2; i < value; i++) {
         if (value % i != 0) {
             continue;
         } else {
