@@ -23,18 +23,16 @@ bool checkPrime(uint64_t value) {
 }
 
 uint64_t nPrime(uint64_t n) {
-        uint64_t k = 0;
-        uint64_t chislo = 0;
-        while (true) {
-            k++;
-            if (checkPrime(k)) {
-                chislo += 1;
-            }
-            if (n == chislo) {
-                return k;
-            }
-        }
+int count = 0;
+  uint64_t k = 0;
+  while (count < n) {
+    if (checkPrime(++k)) {
+      count++;
+    }
+  }
+  return k;
 }
+
 
 uint64_t nextPrime(uint64_t value) {
     while (true) {
